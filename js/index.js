@@ -1,12 +1,12 @@
 'use strict';
 
 let images = [
-    { name: 'Cuttie Kush', url: 'cat.jpg', clicks: 0 },
-    { name: 'Jasmine', url: 'cat2.jpg', clicks: 0 },
-    { name: 'Poppings', url: 'cat3.jpg', clicks: 0 },
-    { name: 'Lateefah', url: 'cat4.jpg', clicks: 0 },
-    { name: 'Cushy', url: 'cat5.jpg', clicks: 0 },
-    { name: 'Meaowry', url: 'cat6.jpg', clicks: 0 }
+    { name: 'Cuttie Kush', url: 'img/cat.jpg', clicks: 0 },
+    { name: 'Jasmine', url: 'img/cat2.jpg', clicks: 0 },
+    { name: 'Poppings', url: 'img/cat3.jpg', clicks: 0 },
+    { name: 'Lateefah', url: 'img/cat4.jpg', clicks: 0 },
+    { name: 'Cushy', url: 'img/cat5.jpg', clicks: 0 },
+    { name: 'Meaowry', url: 'img/cat6.jpg', clicks: 0 }
 ];
 
 let selected;
