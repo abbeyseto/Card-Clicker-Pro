@@ -49,7 +49,15 @@ color:mediumslateblue;
 }
 
 .admin{
+    cursor: pointer;
     padding: 5px;
-    border: 2px solid grey;
+    border: 2px solid none;
     margin: 10px;
+    background-color: lightgreen;
+    border-radius: 10px;
+}
+.admin:hover{
+    color: white;
+    font-weight: bold;
+    background-color: green;
 }
