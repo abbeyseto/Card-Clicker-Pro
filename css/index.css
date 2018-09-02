@@ -1,21 +1,55 @@
 body{
     text-align: center;
+    background-color: lavender;
+}
+
+.heading{
+color:mediumslateblue;
+}
+
+.subheading{
+    margin: 20px;
 }
 
 .card-img-top{
     width: 100%;
 }
 
+.cardList-text{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catList{
+    cursor: pointer;
+}
 .card{
     width: 30%;
     margin: 0 auto;
 }
+
+.card-text{
+     /*margin: 20px;*/
+     border: 1px solid white;
+     border-radius: 10px;
+     background-color: lightblue;
+     align-items: center;
+     margin: 0 auto;
+}
+
 .card-body, #display{
     position: relative;
     display: flex;
     flex-direction: column;
 }
+
 .form-control{
     width: 50%;
     margin: 0 auto;
+}
+
+.admin{
+    padding: 5px;
+    border: 2px solid grey;
+    margin: 10px;
 }

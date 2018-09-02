@@ -11,17 +11,23 @@ let images = [
 
 let selected;
 
-let cardList = '<ul type="none">' + images.map(image => `<li class="card-text">${image.name}</li>`).join('') + '</ul>';
+let cardList = '<div class="catList" ><ul type="none" class="cardList-text">' + images.map(image => `<li type="none" class="list-group-item card-text list-group-item-action">${image.name}</button>`).join('') + '</ul></div>';
+
+{/*<div class="list-group">
+    <button type="button" class="list-group-item list-group-item-action active">Active item</button>
+    <button type="button" class="list-group-item list-group-item-action">Item</button>
+    <button type="button" class="list-group-item list-group-item-action disabled">Disabled item</button>
+</div>*/}
 
 $('#content').append(cardList);
 
 $('li').click('li', function (e, item) {
     selected = this.innerText;
-    //console.log(selected);
+    console.log(selected);
     e.preventDefault();
     for (var items in images) {
         if (selected === images[items].name) {
-            let cardElem = '<div class="card-body"><h4 class="noOfClicks">' + images[items].clicks + '</h4><p class="card-text">' + images[items].name + '</p><div class="card"><img class="card-img-top" src="' + images[items].url + '" alt="cat image"></div></div>';
+            let cardElem = '<div class="card-body"><h4 class="noOfClicks">' + images[items].clicks + '</h4><p class="list-group-item card-text list-group-item-action">' + images[items].name + '</p><div class="card"><img class="card-img-top" src="' + images[items].url + '" alt="cat image"></div></div>';
             $('#display').html(cardElem);
 
             $('#catName').val(images[items].name);
@@ -76,3 +82,11 @@ function updateCat() {
         }
     }
 }
+
+$('.card-text').hover(  function() {
+    //console.log('hover In');
+    $(this).addClass('active');
+  }, function() {
+      //console.log('hover Out');
+    $(this).removeClass('active');
+  })
