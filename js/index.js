@@ -13,11 +13,6 @@ let selected;
 
 let cardList = '<div class="catList" ><ul type="none" class="cardList-text">' + images.map(image => `<li type="none" class="list-group-item card-text list-group-item-action">${image.name}</button>`).join('') + '</ul></div>';
 
-{/*<div class="list-group">
-    <button type="button" class="list-group-item list-group-item-action active">Active item</button>
-    <button type="button" class="list-group-item list-group-item-action">Item</button>
-    <button type="button" class="list-group-item list-group-item-action disabled">Disabled item</button>
-</div>*/}
 
 $('#content').append(cardList);
 
@@ -27,7 +22,7 @@ $('li').click('li', function (e, item) {
     e.preventDefault();
     for (var items in images) {
         if (selected === images[items].name) {
-            let cardElem = '<div class="card-body"><h4 class="noOfClicks">' + images[items].clicks + '</h4><p class="list-group-item card-text list-group-item-action">' + images[items].name + '</p><div class="card"><img class="card-img-top" src="' + images[items].url + '" alt="cat image"></div></div>';
+            let cardElem = '<div class="card-body"><h4 class="noOfClicks">' + images[items].clicks + '</h4><p class="card-text  center">' + images[items].name + '</p><div class="card"><img class="card-img-top" src="' + images[items].url + '" alt="cat image"></div></div>';
             $('#display').html(cardElem);
 
             $('#catName').val(images[items].name);
@@ -75,6 +70,7 @@ function updateCat() {
                 if (name[i].innerText === selected) {
                     selected = $('#catName').val();
                     name[i].innerText = $('#catName').val();
+                    $('.center').html($('#catName').val());
                     console.log('updated', selected);
                     $('.form-group').hide();
                 }
@@ -83,10 +79,17 @@ function updateCat() {
     }
 }
 
-$('.card-text').hover(  function() {
+$('.card-text').hover(function () {
     //console.log('hover In');
     $(this).addClass('active');
-  }, function() {
-      //console.log('hover Out');
+}, function () {
+    //console.log('hover Out');
     $(this).removeClass('active');
-  })
+})
+
+
+
+$('li').click('.card', function () {
+        $('.card').addClass('open');
+        console.log('open added');
+});

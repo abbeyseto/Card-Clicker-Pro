@@ -18,6 +18,7 @@ color:mediumslateblue;
 .cardList-text{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .catList{
@@ -29,12 +30,12 @@ color:mediumslateblue;
 }
 
 .card-text{
-     /*margin: 20px;*/
      border: 1px solid white;
      border-radius: 10px;
      background-color: lightblue;
      align-items: center;
-     margin: 0 auto;
+     width: fit-content;
+
 }
 
 .card-body, #display{
@@ -43,6 +44,14 @@ color:mediumslateblue;
     flex-direction: column;
 }
 
+.center{
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    font-size: 5vh;
+    font-weight: bolder;
+    background-color: #e6e6fa;
+}
 .form-control{
     width: 50%;
     margin: 0 auto;
@@ -61,3 +70,44 @@ color:mediumslateblue;
     font-weight: bold;
     background-color: green;
 }
+
+.open {
+  -webkit-animation-name: open;
+  animation-name: open;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes open {
+  0% {
+  opacity: 0;
+  -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+  transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+  -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+  60% {
+  opacity: 1;
+  -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+  transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+  -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+  }
+  @keyframes open {
+  0% {
+  opacity: 0;
+  -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+  transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+  -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+  60% {
+  opacity: 1;
+  -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+  transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+  -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+  } 
