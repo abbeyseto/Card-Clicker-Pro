@@ -71,6 +71,18 @@ color:mediumslateblue;
     background-color: green;
 }
 
+.main{
+    display: flex;
+    justify-content: center;
+}
+.form-group{
+    margin-top: 10%;
+    width: 50%;
+}
+
+.form-group1{
+    width: 50%;
+}
 .open {
   -webkit-animation-name: open;
   animation-name: open;
