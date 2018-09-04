@@ -81,7 +81,7 @@ color:mediumslateblue;
 }
 
 .form-group1{
-    width: 50%;
+    width: 50% !important;
 }
 .open {
   -webkit-animation-name: open;
